@@ -4,7 +4,18 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/lyubomirkyuchukov/.oh-my-zsh"
 
-alias tsm="transmission-remote"
+export PATH="/usr/local/anaconda3/bin:$PATH"
+
+# Git aliases
+alias ga="git add"
+alias gc="git commit"
+alias gp="git push"
+alias gco="git checkout"
+alias gs="git status"
+alias gr="git rebase"
+alias gl="git log"
+
+alias scrn="open -a ScreenSaverEngine.app"
 
 EDITOR=nvim
 # Set name of the theme to load --- if set to "random", it will
@@ -12,6 +23,7 @@ EDITOR=nvim
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="simple"
+
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -118,12 +130,3 @@ export NVM_DIR="$HOME/.nvm"
 DEFAULT_USER="[user name]"
 prompt_context() {}
 
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh ]] && . /usr/local/lib/node_modules/serverless/node_modules/tabtab/.completions/slss.zsh
