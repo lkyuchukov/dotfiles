@@ -1,7 +1,0 @@
-set showmode
-set surround
-set multiple-cursors
-
-imap jj <Esc>
-:let mapleader = ","
-
