@@ -6,6 +6,15 @@ export ZSH="/Users/lyubomirkyuchukov/.oh-my-zsh"
 
 export PATH="/usr/local/anaconda3/bin:$PATH"
 
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+export JAVA_11_HOME=$(/usr/libexec/java_home -v11)
+
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+alias java11='export JAVA_HOME=$JAVA_11_HOME'
+
+# default to Java 11
+java11
+
 # Git aliases
 alias ga="git add"
 alias gc="git commit"
@@ -15,10 +24,20 @@ alias gs="git status"
 alias gr="git rebase"
 alias gl="git log"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias c="clear"
+
+# screensaver
 alias scrn="open -a ScreenSaverEngine.app"
 
+# set light and darkmode
 alias darkmode='osascript ~/theme.scpt true'
 alias lightmode='osascript ~/theme.scpt false'
+
+# z plugin for terminal navigation
+. ~/z/z.sh
 
 EDITOR=nvim
 # Set name of the theme to load --- if set to "random", it will
@@ -116,7 +135,6 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -133,3 +151,4 @@ export NVM_DIR="$HOME/.nvm"
 DEFAULT_USER="[user name]"
 prompt_context() {}
 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
