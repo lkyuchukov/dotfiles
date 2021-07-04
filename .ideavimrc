@@ -1,0 +1,6 @@
+set relativenumber
+
+map \s <Action>(SplitVertically)
+map \h <Action>(SplitHorizontally)
+map \r <Action>(Run)
+map \d <Action>(Debug)
