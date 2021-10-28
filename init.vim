@@ -35,31 +35,19 @@ set ttyfast
 " Add the g flag to search/replace by default
 set gdefault
 
-" Find files using Telescope command-line sugar.
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-
-" Using lua functions
-nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
-nnoremap <leader>fg <cmd>lua require('telescope.builtin').live_grep()<cr>
-nnoremap <leader>fb <cmd>lua require('telescope.builtin').buffers()<cr>
-nnoremap <leader>fh <cmd>lua require('telescope.builtin').help_tags()<cr>
-
 " Use relative line numbers
 if exists("&relativenumber")
         set relativenumber
         au BufReadPost * set relativenumber
-endi
+endif
 
 call plug#begin('~/.vim/plugged')
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'tomasiser/vim-code-dark'
 Plug 'itchyny/lightline.vim'
-Plug 'shaunsingh/moonlight.nvim'
+Plug 'ayu-theme/ayu-vim'
 call plug#end()
 
-colorscheme codedark
+let ayucolor="dark"   
+colorscheme ayu
+let g:lightline = {
+      \ 'colorscheme': 'ayu_dark',
+      \ }
