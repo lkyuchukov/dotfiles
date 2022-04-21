@@ -1,3 +1,4 @@
+
 set background=dark
 syntax enable
 
@@ -43,11 +44,21 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
-Plug 'ayu-theme/ayu-vim'
+Plug 'projekt0n/github-nvim-theme'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
-let ayucolor="dark"   
-colorscheme ayu
-let g:lightline = {
-      \ 'colorscheme': 'ayu_dark',
-      \ }
+set background=dark
+colorscheme github_dimmed
+let g:lightline = { 'colorscheme': 'material' }
+
+set encoding=UTF-8
+
+"" Map leader to ,
+let mapleader='\'
+
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>

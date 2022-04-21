@@ -1,17 +1,6 @@
-export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-
-export PATH=/usr/local/share/npm/bin:$PATH
-
-export PATH=$PATH:/usr/local/sbin
-
-export JBOSS_HOME=/Users/lyubomirkyuchukov/work/jboss-eap-6.4
-
-export PATH=$PATH:$(go env GOPATH)/bin
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+# set light and darkmode on mac
+alias darkmode='osascript ~/mac-theme.scpt true'
+alias lightmode='osascript ~/mac-theme.scpt false'
 
 # git
 alias ga='git add'
@@ -24,17 +13,15 @@ alias gco='git checkout'
 alias gb='git branch'
 alias gl='git log'
 
-alias c='clear'
+export GOPATH=$HOME/go
+export GOROOT=/usr/local/opt/go/libexec
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
+export PATH="$GOPATH/src/k8s.io/kubernetes/third_party/etcd:${PATH}"
 
-alias build='bash build.sh'
-
-# work related
-alias kill_vpn='launchctl unload /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*'
-alias start_vpn='launchctl load /Library/LaunchAgents/com.paloaltonetworks.gp.pangp*'
-
-# set light and darkmode on mac
-alias darkmode='osascript ~/mac-theme.scpt true'
-alias lightmode='osascript ~/mac-theme.scpt false'
-
+eval "$(mcfly init zsh)"
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

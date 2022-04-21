@@ -2,5 +2,3 @@
 success_symbol = "[➜](bold green)"
 error_symbol = "[✗](bold red)"
 
-[java]
-disabled = true
