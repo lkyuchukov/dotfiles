@@ -25,3 +25,5 @@ eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export GIT_EDITOR=nvim
