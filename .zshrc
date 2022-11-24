@@ -12,6 +12,7 @@ alias gd='git pull'
 alias gco='git checkout'
 alias gb='git branch'
 alias gl='git log'
+alias gcan='git commit --amend --no-edit'
 
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
