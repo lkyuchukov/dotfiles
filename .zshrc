@@ -1,6 +1,7 @@
 # set light and darkmode on mac
 alias darkmode='osascript ~/mac-theme.scpt true'
 alias lightmode='osascript ~/mac-theme.scpt false'
+alias sc='screencapture -c'
 
 # git
 alias ga='git add'
